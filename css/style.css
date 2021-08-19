@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container .to-do-card .card-to-do .middleside1 .box-table .exercise {
+  justify-content: flex-start !important;
+}
+
+.none {
+  display: none !important;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(90deg, #feccae, #f8af83);
+}
+body .container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+body .container .card {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+body .container .card .to-do-list {
+  width: 350px;
+  height: 600px;
+  background: #282b44;
+  overflow: hidden;
+}
+body .container .card .to-do-list .top-side {
+  height: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+body .container .card .to-do-list .top-side .center-text {
+  text-align: center;
+}
+body .container .card .to-do-list .top-side .center-text h1 {
+  font-size: 55px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+body .container .card .to-do-list .top-side .center-text h4 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #adadad;
+}
+body .container .card .to-do-list .bottom-side {
+  height: 50%;
+  background: #282b44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+body .container .card .to-do-list .bottom-side .center-forms {
+  width: 90%;
+  font-family: "Roboto", sans-serif;
+}
+body .container .card .to-do-list .bottom-side .center-forms div {
+  margin: 10px 0px;
+  width: 100%;
+  background: #14192d;
+  padding: 0px 20px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+body .container .card .to-do-list .bottom-side .center-forms div * {
+  cursor: pointer;
+}
+body .container .card .to-do-list .bottom-side .center-forms div i {
+  display: block;
+  flex: 2;
+  min-width: 100px;
+  background: #282b44;
+}
+body .container .card .to-do-list .bottom-side .center-forms div div {
+  flex: 6;
+  text-align: center;
+}
+body .container .card .to-do-list .bottom-side .center-forms p {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #adadad;
+  margin-top: 30px;
+}
+
+.container .to-do-card {
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.container .to-do-card .card-to-do {
+  overflow: hidden !important;
+  width: 30%;
+  height: 80%;
+  background: white;
+}
+.container .to-do-card .card-to-do .topside1 {
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  color: #909cff;
+  border-bottom: 2px solid #c6d3fd7e;
+}
+.container .to-do-card .card-to-do .topside1 div {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+}
+.container .to-do-card .card-to-do .topside1 div:hover {
+  color: #6574f5;
+}
+.container .to-do-card .card-to-do .topside1 .toLeftbtn {
+  flex: 2;
+  font-size: 15px;
+  cursor: pointer;
+}
+.container .to-do-card .card-to-do .topside1 .toRightbtn {
+  flex: 2;
+  font-size: 15px;
+  cursor: pointer;
+}
+.container .to-do-card .card-to-do .topside1 .Dayslight {
+  font-size: 14px;
+  flex: 5;
+  padding: 9px 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  user-select: none;
+}
+.container .to-do-card .card-to-do .topside1 .Dayslight span {
+  margin-left: 10px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.container .to-do-card .card-to-do .scroller {
+  overflow-y: scroll;
+  scrollbar-width: 5px;
+}
+.container .to-do-card .card-to-do .middleside1::-webkit-scrollbar-thumb {
+  width: 5px !important;
+  color: #8995ff !important;
+}
+.container .to-do-card .card-to-do .middleside1 {
+  height: 74%;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table {
+  padding: 10px 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table:hover {
+  background-color: #dfdfdf7e;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 0px;
+  color: #909cff;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table .checked-box {
+  flex: 1;
+  padding: 13px 0px;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table .exercise {
+  flex: 5;
+  padding-left: 20px;
+  text-transform: capitalize;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table .garbage {
+  flex: 1;
+  padding: 13px 0px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table .garbage:hover {
+  background: #909cff;
+  color: white;
+  transition: 0.4s;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table .updrawn {
+  text-decoration: line-through;
+}
+.container .to-do-card .card-to-do .middleside1 .box-table .time {
+  flex: 1;
+  padding-right: 10px;
+  font-family: monospace;
+}
+.container .to-do-card .card-to-do .bottomside1 {
+  height: 14%;
+  color: #909cff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0px 15px;
+  position: relative;
+}
+.container .to-do-card .card-to-do .bottomside1 h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.container .to-do-card .card-to-do .bottomside1 h5 span {
+  font-size: 14px;
+}
+.container .to-do-card .card-to-do .bottomside1 .addition {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px 10px;
+  user-select: none;
+}
+.container .to-do-card .card-to-do .bottomside1 .addition:hover {
+  background-color: #6574f5;
+  color: white;
+  transition: 0.4s;
+}
+.container .to-do-card .card-to-do .bottomside1 .nonesd {
+  right: 0 !important;
+  left: -100% !important;
+  transition: 3s;
+  background: white !important;
+  z-index: -10;
+}
+.container .to-do-card .card-to-do .bottomside1 .inputdata {
+  position: absolute;
+  height: 100px;
+  background: #abccfc;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.container .to-do-card .card-to-do .bottomside1 .inputdata input {
+  outline: none;
+  padding: 7px 10px;
+}
+.container .to-do-card .card-to-do .bottomside1 .inputdata input[type=text] {
+  padding: 10px 10px;
+  border: 1px solid #79aefd;
+}
+.container .to-do-card .card-to-do .bottomside1 .inputdata input[type=time] {
+  outline: none;
+  border: 1px solid #79aefd;
+  padding: 8px 10px !important;
+}
+.container .to-do-card .card-to-do .bottomside1 .inputdata .addbtn {
+  padding: 10px 15px;
+  background: #6d99fa;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+.container .to-do-card .card-to-do .bottomside1 .inputdata .addbtn:hover {
+  background: #6574f5;
+}
+.container .to-do-card .card-to-do .bottomside1 .inputdata .addbtn:active {
+  background: #6574f5;
+}
+
+@media (max-width: 1074px) {
+  .card-to-do {
+    width: 100vw !important;
+    height: 100% !important;
+  }
+
+  .inputdata input[type=text] {
+    width: 70%;
+    padding: 10px 3px !important;
+  }
+
+  .inputdata input[type=time] {
+    width: 28%;
+  }
+
+  .addbtn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

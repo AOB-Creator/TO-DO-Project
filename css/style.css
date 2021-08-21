@@ -178,6 +178,7 @@ body .container .card .to-do-list .bottom-side .center-forms p {
   padding: 10px 20px;
   height: 50px;
   display: flex;
+  border-bottom: 1px solid #909bff36;
   align-items: center;
   justify-content: space-between;
 }
@@ -199,7 +200,9 @@ body .container .card .to-do-list .bottom-side .center-forms p {
 .container .to-do-card .card-to-do .middleside1 .box-table .exercise {
   flex: 5;
   padding-left: 20px;
-  text-transform: capitalize;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase !important;
 }
 .container .to-do-card .card-to-do .middleside1 .box-table .garbage {
   flex: 1;

@@ -195,6 +195,7 @@ body{
                     padding: 10px 20px;
                     height: 50px;
                     display: flex;
+                    border-bottom: 1px solid #909bff36;
                     align-items: center;
                     justify-content: space-between;
                         &:hover{
@@ -215,7 +216,9 @@ body{
                         flex: 5;
                         @extend %justify;    
                         padding-left: 20px;
-                        text-transform: capitalize;
+                        font-size: 12px;
+                        font-family: $rbto;
+                        text-transform: uppercase !important;
                     }
                     .garbage{
                         flex: 1;

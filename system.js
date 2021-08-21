@@ -58,13 +58,9 @@ class ToDoList{
             }
 
         }, 1000)
-        const clock = document.querySelector(".clock")
-            clock.textContent=`${times.getHours()}:${times.getMinutes()}`
-        setInterval(()=>{
         
-            const clock = document.querySelector(".clock")
-            clock.textContent=`${times.getHours()}:${times.getMinutes()}`
-        }, 10000)
+
+        
 
     }
     
@@ -126,16 +122,20 @@ class ToDoList{
 
             garbage.addEventListener("click", (e)=>{
                 const data = JSON.parse(localStorage.getItem("datas"))
-                const terms = data.map((item, inde)=>{
+                const terms = data.filter((item, inde)=>{
                     
                        if(inde !==index ) {
-                        return item    
+                        return item
                        }
                        
                 })
-                
+                console.log("ok")
                 localStorage.setItem("datas", JSON.stringify(terms))
-                
+                const productdata = JSON.parse(localStorage.getItem("datas"))
+                const clonetodo = new ToDoList(productdata);
+                clonetodo.remover()        
+                clonetodo.boxmaker();              
+                clonetodo.other();    
             })
         
         })
@@ -146,7 +146,13 @@ let dataexercise = ""
 let timeexercise = ""
 
 
-const datas = []
+if(localStorage.getItem("datas")==null){
+    datas=[]
+}else{
+    datas = JSON.parse(localStorage.getItem("datas"))
+}
+
+
 
 const inputtext = document.querySelector("input#exercise")
 inputtext.addEventListener("change", (e)=>{
@@ -165,18 +171,34 @@ const addbtn = document.querySelector(".addbtn")
 
 
 addbtn.addEventListener("click", function(e){
-        e.preventDefault()
-       datas.push([dataexercise, timeexercise]) 
-       inputtext.value=""
-       inputtime.value=""
-       console.log(datas)
-       localStorage.setItem("datas", JSON.stringify(datas))       
-
+    e.preventDefault() 
+        if(dataexercise!=="" && timeexercise!==""){
+            
+        if(localStorage.getItem("datas")==null){
+            datas=[]
+            datas.push([dataexercise, timeexercise]) 
+            localStorage.setItem("datas", JSON.stringify(datas))       
+        }else{
+            const newdata = JSON.parse(localStorage.getItem("datas"))
+        
+            console.log("new data ->", newdata )
+       newdata.push([dataexercise, timeexercise]) 
+       localStorage.setItem("datas", JSON.stringify(newdata))       
+    }
+       
+       
        const productdata = JSON.parse(localStorage.getItem("datas"))
        const clonetodo = new ToDoList(productdata);
        clonetodo.remover()        
        clonetodo.boxmaker();              
        clonetodo.other();       
+       inputtext.value=""
+       inputtime.value=""
+    }
+    else{
+        
+        alert("Fill all the Forms")
+    }
 
 })
 
@@ -188,55 +210,3 @@ clonetodo.other();
 
 
 
-
-
-
-
-
-// boxmaker(){
-//     console.log(datas)
-    
-//     this.array.forEach(function(item, index){
-
-//         const mainpage = document.querySelector(".middleside1");
-
-//         const box = document.createElement("div")
-//         box.className="box-table"
-
-//         const check_box = document.createElement("div")
-//         check_box.className="checkbox"
-
-//         const checkbox = document.createElement("input")
-//         checkbox.setAttribute("type", "checkbox");
-//         check_box.appendChild(checkbox)
-
-//         const exercise = document.createElement("div")
-//         exercise.className="exercise"
-//         exercise.textContent=item[0]
-
-//         const time = document.createElement("div")
-//         time.className="time"
-//         time.textContent=item[1]
-
-//         const garbage = document.createElement("div")
-//         garbage.classList="garbage"
-//         const garicons = document.createElement("i")
-//         garicons.classList="far fa-trash-alt"
-//         garbage.appendChild(garicons)
-
-//         box.append(check_box, exercise, time, garbage);
-//         mainpage.appendChild(box)
-
-
-//         checkbox.addEventListener("click", ()=>{
-//             exercise.classList.toggle("updrawn")
-//         })
-            
-
-//         garbage.addEventListener("click", (e)=>{
-            
-            
-//         })
-
-//     })
-// }
